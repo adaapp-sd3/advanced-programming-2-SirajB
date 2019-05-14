@@ -32,7 +32,7 @@ class Field extends Drawable {
 
   plant(x: number, y: number) {
     console.log("new plant")
-    // Get the crop name from the field name
+    // // Get the crop name from the field name
     // var cropName = this.name.split(" ") // => e.g. "Wheat"
     // // Add a new crop to the field's list of crops
     // this.crops.push(new Crop(cropName[0], this, x, y))
