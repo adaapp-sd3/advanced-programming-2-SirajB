@@ -4,11 +4,12 @@ class MarketDashboard extends Component {
 
   buyItem = item => {
     if (item === "seeds") {
-      this.props.market.currentFarmer.myFarm.seeds.total =
-        this.props.market.currentFarmer.budget *
-        this.props.market.grassSeedPrice
-      console.log(this.props.market.currentFarmer.myFarm.seeds)
-      this.props.market.currentFarmer.budget = 0
+      if (this.props.market.currentFarmer.budget > 0) {
+
+        this.props.market.currentFarmer.myFarm.seeds.total += 1
+        this.props.market.currentFarmer.budget -= this.props.market.grassSeedPrice
+        console.log(this.props.market.currentFarmer.myFarm.seeds)
+      }
     }
   }
 
