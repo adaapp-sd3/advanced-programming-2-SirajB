@@ -14,11 +14,17 @@ class MarketDashboard extends Component {
   }
 
   sellItem = item => {
+    const currentFarmer = this.props.market.currentFarmer
     if (item === "milk") {
-      if (this.props.market.currentFarmer.myFarm.milk.total > 0) {
+      if (currentFarmer.myFarm.milk.total > 0) {
 
-        this.props.market.currentFarmer.myFarm.milk.total -= 1
-        this.props.market.currentFarmer.budget += this.props.market.milkPrice
+        currentFarmer.myFarm.milk.total -= 1
+        currentFarmer.budget += this.props.market.milkPrice
+      }
+    } else if (item === "beef") {
+      if (currentFarmer.myFarm.beef.total > 0) {
+        currentFarmer.myFarm.beef.total -= 1
+        currentFarmer.budget += this.props.market.beefPrice
       }
     }
   }
@@ -33,21 +39,21 @@ class MarketDashboard extends Component {
           <dt>Seeds</dt>
           <dd>
             <button onClick={() => this.buyItem("seeds")}>
-              Buy seeds for {this.props.market.grassSeedPrice}
+              Buy seeds for £{this.props.market.grassSeedPrice}
             </button>
           </dd>
           <dt>Solar panels</dt>
-          <dd>{this.props.market.solarPanelPrice} per unit</dd>
+          <dd>£{this.props.market.solarPanelPrice} per unit</dd>
           <dt>Green gas</dt>
-          <dd>{this.props.market.greenGasPrice} per unit</dd>
+          <dd>£{this.props.market.greenGasPrice} per unit</dd>
         </dl>
         <h3>Sell</h3>
         <dl>
           <dt>Milk</dt>
-          <dd>{this.props.market.milkPrice} per pint</dd>
+          <dd>£{this.props.market.milkPrice} per pint</dd>
           <button onClick={() => this.sellItem("milk")}>Sell Milk</button>
           <dt>Beef</dt>
-          <dd>{this.props.market.beefPrice} per unit</dd>
+          <dd>£{this.props.market.beefPrice} ounce</dd>
           <button onClick={() => this.sellItem("beef")}>Sell Beef</button>
         </dl>
       </div>

@@ -18,6 +18,7 @@ class FarmerDashboard extends Component {
           {this.props.farmer.myFarm && (<>
             <dt>Total straw</dt><dd>{this.props.farmer.myFarm.straw.total} bails</dd>
             <dt>Total milk</dt><dd>{this.props.farmer.myFarm.milk.total} pints</dd>
+            <dt>Total beef</dt><dd>{this.props.farmer.myFarm.beef.total} ounces</dd>
             <dt>Total seeds</dt><dd>{this.props.farmer.myFarm.seeds.total} bunches</dd>
 
             </>
