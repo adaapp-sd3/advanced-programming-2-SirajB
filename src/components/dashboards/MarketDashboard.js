@@ -4,6 +4,7 @@ class MarketDashboard extends Component {
 
   buyItem = item => {
     const currentFarmer = this.props.market.currentFarmer;
+    
     console.log('market: ', this.props.market)
 
     if (item === "seeds") {
@@ -27,6 +28,33 @@ class MarketDashboard extends Component {
 
         currentFarmer.myFarm.greenGas.total += 1
         currentFarmer.budget -= this.props.market.greenGasPrice
+        console.log(currentFarmer.myFarm.greenGas)
+      }
+
+
+    } else if (item === "cows") {
+      if (currentFarmer.budget - this.props.market.animalCowPrice > 0) {
+
+        currentFarmer.myFarm.cows.total += 1
+        currentFarmer.budget -= this.props.market.animalCowPrice
+        console.log(currentFarmer.myFarm.greenGas)
+      }
+
+
+    } else if (item === "chickens") {
+      if (currentFarmer.budget - this.props.market.animalChickenPrice > 0) {
+
+        currentFarmer.myFarm.chickens.total += 1
+        currentFarmer.budget -= this.props.market.animalChickenPrice
+        console.log(currentFarmer.myFarm.greenGas)
+      }
+
+
+    } else if (item === "sheep") {
+      if (currentFarmer.budget - this.props.market.animalSheepPrice > 0) {
+
+        currentFarmer.myFarm.sheep.total += 1
+        currentFarmer.budget -= this.props.market.animalSheepPrice
         console.log(currentFarmer.myFarm.greenGas)
       }
 
@@ -94,6 +122,24 @@ class MarketDashboard extends Component {
           <dd>
             <button onClick={() => this.buyItem("greenGas")}>
               £{this.props.market.greenGasPrice} per unit
+            </button>
+          </dd>
+          <dt>Cows</dt>
+          <dd>
+            <button onClick={() => this.buyItem("cows")}>
+              £{this.props.market.animalCowPrice} per animal
+            </button>
+          </dd>
+          <dt>Chickens</dt>
+          <dd>
+            <button onClick={() => this.buyItem("chickens")}>
+              £{this.props.market.animalChickenPrice} per animal
+            </button>
+          </dd>
+          <dt>Sheep</dt>
+          <dd>
+            <button onClick={() => this.buyItem("sheep")}>
+              £{this.props.market.animalSheepPrice} per animal
             </button>
           </dd>
         </dl>
