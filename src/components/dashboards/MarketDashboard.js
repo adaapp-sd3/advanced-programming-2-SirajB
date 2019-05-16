@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-
+import "../../index.css"
 class MarketDashboard extends Component {
 
   buyItem = item => {
@@ -73,6 +73,12 @@ class MarketDashboard extends Component {
           <dd>£{this.props.market.milkPrice} per pint</dd>
           <button onClick={() => this.sellItem("milk")}>Sell Milk</button>
           <dt>Beef</dt>
+          <dd>£{this.props.market.beefPrice} ounce</dd>
+          <button onClick={() => this.sellItem("beef")}>Sell Beef</button>
+          <dt>Test</dt>
+          <dd>£{this.props.market.beefPrice} ounce</dd>
+          <button onClick={() => this.sellItem("beef")}>Sell Beef</button>
+          <dt>This should be seen</dt>
           <dd>£{this.props.market.beefPrice} ounce</dd>
           <button onClick={() => this.sellItem("beef")}>Sell Beef</button>
         </dl>
