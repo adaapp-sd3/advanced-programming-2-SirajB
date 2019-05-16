@@ -11,7 +11,11 @@ class Farm extends Drawable {
   straw: any
   milk: any
   seeds: any
-  beef: any
+  beef?: any
+  egg?: any
+  wool?: any
+  chicken?: any
+  lamb?: any
   constructor(
     cows: any = {
       name: "Cows",
@@ -43,6 +47,26 @@ class Farm extends Drawable {
       total: 0,
       unit: 'ounces'
     },
+    egg: any = {
+      name: 'Egg',
+      total: 0,
+      unit: 'cartons'
+    },
+    wool: any = {
+      name: 'Wool',
+      total: 0,
+      unit: 'bags'
+    },
+    chicken: any = {
+      name: 'Chicken',
+      total: 0,
+      unit: 'kilograms'
+    },
+    lamb: any = {
+      name: 'Lamb',
+      total: 0,
+      unit: 'kilograms'
+    },
     seeds: any = {
       name: "Grass seeds",
       total: 0,
@@ -57,6 +81,10 @@ class Farm extends Drawable {
     this.milk = milk
     this.seeds = seeds
     this.beef = beef
+    this.egg = egg
+    this.wool = wool
+    this.chicken = chicken
+    this.lamb = lamb
   }
 
   public preload() {
