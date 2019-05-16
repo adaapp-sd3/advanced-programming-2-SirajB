@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-
+import "../../index.css"
 class FieldDashboard extends Component {
 
   milkCows = () => {
