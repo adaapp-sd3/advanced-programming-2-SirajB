@@ -26,6 +26,26 @@ class MarketDashboard extends Component {
         currentFarmer.myFarm.beef.total -= 1
         currentFarmer.budget += this.props.market.beefPrice
       }
+    } else if (item === "egg") {
+      if (currentFarmer.myFarm.egg.total > 0) {
+        currentFarmer.myFarm.egg.total -= 1
+        currentFarmer.budget += this.props.market.eggPrice
+      } 
+    } else if (item === "wool") {
+      if (currentFarmer.myFarm.wool.total > 0) {
+        currentFarmer.myFarm.wool.total -= 1
+        currentFarmer.budget += this.props.market.woolPrice
+      } 
+    } else if (item === "chicken") {
+      if (currentFarmer.myFarm.chicken.total > 0) {
+        currentFarmer.myFarm.chicken.total -= 1
+        currentFarmer.budget += this.props.market.meatChickenPrice
+      } 
+    } else if (item === "lamb") {
+      if (currentFarmer.myFarm.lamb.total > 0) {
+        currentFarmer.myFarm.lamb.total -= 1
+        currentFarmer.budget += this.props.market.meatLambPrice
+      } 
     }
   }
 
