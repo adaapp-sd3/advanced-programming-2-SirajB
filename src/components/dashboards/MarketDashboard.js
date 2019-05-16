@@ -4,22 +4,35 @@ class MarketDashboard extends Component {
 
   buyItem = item => {
     const currentFarmer = this.props.market.currentFarmer;
-    if (currentFarmer.budget > 0) {
-      if (item === "seeds") {
+    console.log('market: ', this.props.market)
+
+    if (item === "seeds") {
+      if (currentFarmer.budget - this.props.market.grassSeedPrice > 0) {
 
         currentFarmer.myFarm.seeds.total += 1
         currentFarmer.budget -= this.props.market.grassSeedPrice
         console.log(currentFarmer.myFarm.seeds)
-      } else if (item === "solarPanel") {
+      }
+
+    } else if (item === "solarPanel") {
+      if (currentFarmer.budget - this.props.market.solarPanelPrice > 0) {
 
         currentFarmer.myFarm.solarPanel.total += 1
         currentFarmer.budget -= this.props.market.solarPanelPrice
-      } else if (item === "greenGas") {
+        console.log(currentFarmer.myFarm.solarPanel)
+      }
+
+    } else if (item === "greenGas") {
+      if (currentFarmer.budget - this.props.market.greenGasPrice > 0) {
 
         currentFarmer.myFarm.greenGas.total += 1
         currentFarmer.budget -= this.props.market.greenGasPrice
+        console.log(currentFarmer.myFarm.greenGas)
       }
+
+
     }
+
   }
 
   sellItem = item => {
@@ -79,7 +92,7 @@ class MarketDashboard extends Component {
           </dd>
           <dt>Green gas</dt>
           <dd>
-            <button onClick={() => this.buyItem("solarPanel")}>
+            <button onClick={() => this.buyItem("greenGas")}>
               £{this.props.market.greenGasPrice} per unit
             </button>
           </dd>
