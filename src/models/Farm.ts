@@ -11,11 +11,13 @@ class Farm extends Drawable {
   straw: any
   milk: any
   seeds: any
-  beef?: any
-  egg?: any
-  wool?: any
-  chicken?: any
-  lamb?: any
+  beef: any
+  egg: any
+  wool: any
+  chicken: any
+  lamb: any
+  solarPanel: any
+  greenGas: any
   constructor(
     cows: any = {
       name: "Cows",
