@@ -8,18 +8,47 @@ class FieldDashboard extends Component {
     }
   }
 
-  shearSheep = () => {
-    for (var i=0; i<this.props.field.contents.length; i++) {
-      this.props.field.contents[i].yieldWool()
+  yieldBeef = () => {
+    const length = this.props.field.contents.length
+    const mid = length/2
+    let cows = this.props.field.contents[0].farm.cows
+    for (let i=length-1; i>mid; i--) {
+      cows.objects[i].yieldBeef()
     }
   }
 
+  
+  
+  shearSheep = () => {
+    for (var i=0; i<this.props.field.contents.length; i++) {
+      this.props.field.contents[i].yieldWool()
+    }  
+  }
+
+  yieldLamb = () => {
+    const length = this.props.field.contents.length
+    const mid = length/2
+    let sheep = this.props.field.contents[0].farm.sheep
+    for (let i=length-1; i>mid; i--) {
+      sheep.objects[i].yieldLamb()
+    }
+  }
+  
   getEggs = () => {
     for (var i=0; i<this.props.field.contents.length; i++) {
       this.props.field.contents[i].yieldEgg()
     }
   }
 
+  yieldChicken = () => {
+    const length = this.props.field.contents.length
+    const mid = length/2
+    let chickens = this.props.field.contents[0].farm.chickens
+    for (let i=length-1; i>mid; i--) {
+      chickens.objects[i].yieldChicken()
+    }
+  }
+  
   render() {
     return (
       <div className="FieldDashboard">
@@ -29,13 +58,22 @@ class FieldDashboard extends Component {
             In this field you have {this.props.field.contents.length}{" "}
             {this.props.field.contents[0].name}s
             {this.props.field.contents[0].name === "Cow" && (
-              <button onClick={this.milkCows}>Milk them</button>
-            )}
+              <div>
+                <button onClick={this.milkCows}>Milk them</button>
+                <button onClick={this.yieldBeef}>Get beef from half the cows</button>
+              </div>
+              )}
             {this.props.field.contents[0].name === "Sheep" && (
-              <button onClick={this.shearSheep}>Shear them</button>
+              <div>
+              <button onClick={this.shearSheep}>Sheer them</button>
+              <button onClick={this.yieldLamb}>Get lamb from half the sheep</button>
+            </div>
             )}
             {this.props.field.contents[0].name === "Chicken" && (
-              <button onClick={this.getEggs}>Collect eggs</button>
+              <div>
+              <button onClick={this.getEggs}>Gather eggs</button>
+              <button onClick={this.yieldChicken}>Get chicken from half the chicken</button>
+            </div>
             )}
           </p>
           

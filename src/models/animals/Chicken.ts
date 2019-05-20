@@ -24,6 +24,7 @@ class Chicken extends Animal {
   yieldChicken(): any {
     this.farm.chicken.total += this.hunger > 0 ? 100 / this.hunger : 120
     this.hunger += 1
+    this.health=0
   }
 
   eatCorn(): any {

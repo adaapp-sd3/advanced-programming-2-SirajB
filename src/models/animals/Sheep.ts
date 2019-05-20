@@ -24,6 +24,7 @@ class Sheep extends Animal {
   yieldLamb(): any {
     this.farm.lamb.total += this.hunger > 0 ? 100 / this.hunger : 120
     this.hunger += 1
+    this.health=0
   }
 
   eatStraw(): any {
