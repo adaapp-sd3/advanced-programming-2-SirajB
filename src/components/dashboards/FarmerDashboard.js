@@ -23,7 +23,7 @@ class FarmerDashboard extends Component {
             <dt>Total milk</dt><dd>{this.props.farmer.myFarm.milk.total} {this.props.farmer.myFarm.milk.unit}</dd>
             <dt>Total chickens</dt><dd>{this.props.farmer.myFarm.chickens.total} {this.props.farmer.myFarm.chickens.unit}</dd>
             <dt>Total chicken meat</dt><dd>{this.props.farmer.myFarm.chicken.total} {this.props.farmer.myFarm.chicken.unit}</dd>
-            <dt>Total egg</dt><dd>{this.props.farmer.myFarm.egg.total} {this.props.farmer.myFarm.egg.unit}</dd>
+            <dt>Total eggs</dt><dd>{this.props.farmer.myFarm.eggs.total} {this.props.farmer.myFarm.eggs.unit}</dd>
             <dt>Total sheep</dt><dd>{this.props.farmer.myFarm.sheep.total} {this.props.farmer.myFarm.sheep.unit}</dd>
             <dt>Total lamb</dt><dd>{this.props.farmer.myFarm.lamb.total} {this.props.farmer.myFarm.lamb.unit}</dd>
             <dt>Total wool</dt><dd>{this.props.farmer.myFarm.wool.total} {this.props.farmer.myFarm.wool.unit}</dd>

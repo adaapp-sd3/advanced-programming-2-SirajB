@@ -1,9 +1,9 @@
 import Animal from "../abstract/Animal"
 import Farm from "../Farm";
-class Cow extends Animal {
-  name: string = "Cow"
-  genus: string = "Cows"
-  imgUrl: string = "/img/twtr/1f404.png"
+class Sheep extends Animal {
+  name: string = "Sheep"
+  genus: string = "Sheep"
+  imgUrl: string = "/img/twtr/1f411.png"
   eats: string = "straw"
   hunger: number = 0
   farm: Farm
@@ -13,18 +13,17 @@ class Cow extends Animal {
     this.farm = farm
   }
 
-  // if cow is hungry, yield less milk
-  yieldMilk(): any {
-    let amountOfMilkToYield = 5 - this.hunger
-    this.farm.milk.total += Math.abs(amountOfMilkToYield)
+  // if sheep is hungry, yield less wool
+  yieldWool(): any {
+    let amountOfWoolToYield = 5 - this.hunger
+    this.farm.wool.total += Math.abs(amountOfWoolToYield)
     this.hunger += 1
   }
 
-  // if cow is thin, yield less beef
-  yieldBeef(): any {
-    this.farm.beef.total += this.hunger > 0 ? 100 / this.hunger : 120
+  // if sheep is thin, yield less Lamb
+  yieldLamb(): any {
+    this.farm.lamb.total += this.hunger > 0 ? 100 / this.hunger : 120
     this.hunger += 1
-    // return this.hunger > 0 ? 100 / this.hunger : 120
   }
 
   eatStraw(): any {
@@ -35,10 +34,10 @@ class Cow extends Animal {
       } else {
         if (this.hunger < 5) {
           this.hunger = this.hunger + 1
-        }
+        } 
 
       }
-    }
+    } 
   }
 
   public preload() {
@@ -46,17 +45,17 @@ class Cow extends Animal {
     console.log(this.p5Img)
   }
 
-  makeSound() {
-    return "Moooo"
+  makeSound(): any {
+    return "Baaaa"
   }
 
-  checkHealth() {
-    if (this.hunger >= 5) {
-      console.log("Dying", this.health)
-      this.health -= 1
+  checkHealth(): any {
+    if(this.hunger >= 5){
+        console.log("Dying", this.health)
+        this.health -= 1
     }
-    if (this.health <= 0) {
-      this.farm.cows.objects.pop()
+    if(this.health <= 0){
+      this.farm.sheep.objects.pop()
     }
   }
 
@@ -66,8 +65,7 @@ class Cow extends Animal {
     this.doSomethingOccasionally(() => this.eatStraw())
     this.stopForFarmer()
     this.checkHealth()
-
   }
 }
 
-export default Cow
+export default Sheep

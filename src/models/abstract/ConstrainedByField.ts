@@ -27,9 +27,10 @@ abstract class ConstrainedByField extends Drawable {
   //bounces the animal off edges of the field
   constrainItem() {
     // bottom
-    if (this.y - this.height + 1 >= this.fieldY + this.fieldH - this.height) {
+    if (this.y - this.height + 10 >= this.fieldY + this.fieldH - this.height) {
       this.velocityY = -this.velocityY * this.bounceSpeed
       this.y = this.fieldY + this.fieldH - this.height - 1
+      console.log('Bounced!')
     }
  
     //top

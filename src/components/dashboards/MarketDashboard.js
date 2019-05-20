@@ -34,7 +34,7 @@ class MarketDashboard extends Component {
 
     } else if (item === "cows") {
       if (currentFarmer.budget - this.props.market.animalCowPrice > 0) {
-
+      
         currentFarmer.myFarm.cows.total += 1
         currentFarmer.budget -= this.props.market.animalCowPrice
         console.log(currentFarmer.myFarm.greenGas)
