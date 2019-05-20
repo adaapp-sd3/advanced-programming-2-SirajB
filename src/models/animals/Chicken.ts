@@ -57,6 +57,7 @@ class Chicken extends Animal {
     }
     if (this.health <= 0) {
       this.farm.chickens.objects.pop()
+      this.farm.chickens.total -=1
     }
   }
 
