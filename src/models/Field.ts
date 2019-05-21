@@ -1,9 +1,13 @@
 import Drawable from "./abstract/Drawable"
+import FieldType from "./abstract/FieldType"
+import Infrastructure from "./abstract/Infrastructure"
+
 
 class Field extends Drawable {
   image: any
   contents: any[]
   fillColour: string = ""
+  type: FieldType = FieldType.Grazing
 
   constructor(
     xPos: number,
@@ -11,7 +15,8 @@ class Field extends Drawable {
     w: number,
     h: number,
     initalContents: any[] = [],
-    fillColour: string = "#d8a27b"
+    fillColour: string = "#d8a27b",
+    type: FieldType = FieldType.Grazing
   ) {
     super()
     this.width = w
@@ -20,6 +25,7 @@ class Field extends Drawable {
     this.y = yPos
     this.contents = initalContents
     this.fillColour = fillColour
+    this.type = type
   }
 
   public draw() {
@@ -40,6 +46,16 @@ class Field extends Drawable {
     // // Add a new crop to the field's list of crops
     // this.crops.push(new Crop(cropName[0], this, x, y))
   }
+
+  placeInfrastructure(x: number, y: number, name: string) {
+    let infrastructure = new Infrastructure(name)
+    infrastructure.p5 = this.p5
+    infrastructure.preload()
+    infrastructure.setRandomPositionInField(this.x, this.y, this.width, this.height)
+    this.contents.push(infrastructure)
+  }
+
+
 }
 
 export default Field
