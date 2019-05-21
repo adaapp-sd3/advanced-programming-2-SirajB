@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import "../../App.css"
 class FieldDashboard extends Component {
 
   milkCows = () => {
@@ -17,8 +16,6 @@ class FieldDashboard extends Component {
     }
   }
 
-  
-  
   shearSheep = () => {
     for (var i=0; i<this.props.field.contents.length; i++) {
       this.props.field.contents[i].yieldWool()
