@@ -13,17 +13,9 @@ code {
     monospace;
 }
 
-.FarmerDashboard {
-  height: 10em;
-  columns: 3;
-  overflow-y: scroll;
-}
 
-.MarketDashboard {
-  height: 300px;
-  overflow-y: scroll;
-  
-}
+
+
 
 .FieldDashboard {
   height: 500px;

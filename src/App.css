@@ -29,6 +29,18 @@
   color: rgb(162, 0, 255)
 }
 
+.FarmerDashboard {
+  height: 10em;
+  columns: 3;
+  overflow-y: scroll;
+}
+
+.MarketDashboard {
+  height: 300px;
+  overflow-y: scroll;
+  
+}
+
 .App-link {
   color: #61dafb;
 }
