@@ -3,7 +3,7 @@
 }
 
 .App h2 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 .App-logo {
@@ -20,12 +20,12 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: rgb(255, 255, 255);
+  color: rgb(241, 68, 68);
 }
 
 .App-header:hover {
   /* text-decoration: underline; */
-  opacity: 0.9;
+  opacity: 0.98;
   color: rgb(162, 0, 255)
 }
 
@@ -35,10 +35,26 @@
   overflow-y: scroll;
 }
 
+.FarmerDashboard:hover {
+  color: #3e10d4
+}
+
 .MarketDashboard {
   height: 300px;
   overflow-y: scroll;
-  
+}
+
+.MarketDashboard:hover {
+  color: rgb(48, 0, 182)
+}
+
+.FieldDashboard {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.FieldDashboard:hover {
+  color: rgb(48, 0, 182)
 }
 
 .App-link {
