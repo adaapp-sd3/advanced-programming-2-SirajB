@@ -57,6 +57,17 @@
   color: rgb(48, 0, 182)
 }
 
+.Weather{
+  display: inline-flex;
+  font-size: 10pt;
+  margin-left: 10px
+}
+
+.Weather img {
+  height: 50px;
+  width: 50px;
+}
+
 .App-link {
   color: #61dafb;
 }
