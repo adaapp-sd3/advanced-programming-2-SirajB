@@ -8,14 +8,14 @@ Task - Added full prices to Market.ts including animals and products not ready y
 Subtask - Read through code, identifying what references what and how it interacts.
 
 Task - Made it so you cannot sell milk more than what you have
-### (5 hours)
+#### (5 hours)
 
 ### Date: 15/05/2019
 
 Task - Allowed seeds to be purchased in singular units
 
 Task - Code to allow for measurment of beef and selling of beef implemented
-### (2.5 hours)
+#### (2.5 hours)
 
 ### Date: 16/05/2019
 
@@ -33,7 +33,7 @@ Task - mocked solar panel and green gas puchase, added in handling so that you c
 Task - can purchase cows chickensa nd sheep. Market place fully functional
 
 Task - Merged pull request #1 from adapp-sd3/feature/market
-###(9 hours)
+####(9 hours)
 
 ### Date: 20/05/2019
 
@@ -49,7 +49,7 @@ Task - Correctly removes amount of animals from dashboard once dead
 Task - Css stylings
 Subtask - Read up on more CSS stylings and front-end usage
 
-### (6.5 hours)
+#### (6.5 hours)
 
 
 ### Date: 21/05/2019
@@ -62,7 +62,7 @@ Task - cleaned up some unused code
 
 Task - Each field now has an enum of type FieldType, Each field now has a specific purpiose. Infrastructure class added so instances can be either solar panel or gas generator
 
-### (5 hours)
+#### (5 hours)
 
 ### Date: 22/05/2019
 
@@ -74,5 +74,7 @@ Subtask - Read up on openWeather API usage. Cross-references old working project
 Task - Changed CSS for weather font size
 Subtask - Looked into px vs pt sizing.
 
-### (3 hours)
+Task - Added Timesheet
+
+#### (3 hours)
 
